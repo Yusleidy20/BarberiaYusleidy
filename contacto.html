@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <header>
+        <div class="caja">
+        <h1><a href="index.html"><img src="img/logo.png" alt="Logo de la Barberia Yusleidy" width="20%" alt=""></a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="producto.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</header>
+
+<main>
+    <form action="">
+        <label for="nombreapellido">Nombre y Apellido</label>
+        <input type="text" id="nombreapellido" class="input-padron" required>
+
+        <label for="correoelectronico">Correo Electronico</label>
+        <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
+        
+        <label for="mensaje">Mensaje</label>
+        <textarea name="" id="mensaje" cols="70" rows="10" class="input-padron" required></textarea>
+
+
+        <fieldset>
+        <legend class="test" id="test">¿Cómo le gustaría que lo contactemos?</legend>
+
+        <label for="radio-email"><input type="radio" name="contacto" id="radio-email " value="email">Email</label>
+
+        <label for="radio-telefono"><input type="radio" name="contacto" id="radio-telefono " value="telefono">Teléfono</label>
+
+        <label for="radio-whatsapp"><input type="radio" name="contacto" id="radio-whatsapp " value="whatsapp" checked>
+            Whatsapp</label>
+        
+        </fieldset>
+
+    <fieldset>
+    <legend>¿En cúal horario prefiere ser atendido?</legend>
+    <select> 
+        <option >Mañana</option>
+        <option value="">Tarde</option>
+        <option >Noche</option>
+    </select>
+    </fieldset>
+    <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barberia Yusleidy?</label>
+
+    <input class="enviar" type="submit" value="Enviar Formulario">
+    </form>
+</main>
+
+<footer>
+    <img src="img/logo.png" alt="Logo de la Barberia Yusleidy"   width="10%">
+    <p class="copyright">&copy Copyright Barberia Yusleidy - 2024</p>
+</footer>
+    
+</body>
+</html>

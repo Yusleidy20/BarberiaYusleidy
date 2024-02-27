@@ -1,0 +1,239 @@
+body{
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+header{
+    background-color: #f391f3;
+    padding: 20px 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    top: 80px;
+    right: 0;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+
+}
+
+nav a{
+    text-transform: uppercase;
+    color: rgb(253, 253, 253);
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #9bdfff;
+}
+
+
+
+form{
+    margin: 40px 200px;
+}
+
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+footer{
+    text-align: center;
+    background-color: #f391f3;
+    background-size: cover;
+    padding: 40px;
+    
+}
+.copyright{
+    color: white;
+    margin: 20px;
+    font-size: 13px;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+
+form legend{
+    color: #5330b1;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #5330b1;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+
+.enviar:hover{
+    background-color: #9bdfff;
+    transform: scale(1.2);
+}
+
+table{
+    margin: 40px 40px;
+}
+
+thead{
+    background-color: #5330b1;
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+
+/** Css pagina principal*/
+
+.banner{
+    width: 100%;
+    height: 80vh;
+}
+
+.principal{
+    padding: 3em 0;
+    background-color: #fefefe;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+}
+
+.principal p{
+    margin: 0 0 1em;
+    
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utensilios{
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.mapa{
+    padding:3em;
+    background: linear-gradient(#fefefe,#888888);
+}
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 3em 0;
+    background-color: #888888;
+}
+
+.contenido-diferenciales{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.list-diferenciales{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items{
+    line-height: 1.5;
+}
+.items:before{
+    content: "★";
+}
+
+.items:first-child{
+    font-weight: bold;
+}
+
+.imagen-diferenciales{
+    width: 50%;
+    transition: 400ms;
+    box-shadow: 10px 10px 30px 15px #000000;
+
+}
+
+.imagen-diferenciales:hover{
+    opacity: 0.3;
+}
+
+.video{
+    width: 560px;
+    height: 300px;
+    margin: 1em auto;
+}
+
+@media screen and (max-width:480px){
+    h1{
+        text-align: center;
+        
+    }
+    nav{
+        position: static;
+    }
+
+    .caja, .principal,.mapa-contenido, .contenido-diferenciales,.video{
+        width: auto;
+        
+    }
+    .principal,.mapa-contenido,.contenido-diferenciales, .video{
+        margin: 20px;
+    }
+    .list-diferenciales,.imagen-diferenciales{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}

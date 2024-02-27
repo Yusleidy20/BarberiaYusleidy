@@ -1,0 +1,54 @@
+
+
+
+header{
+    background-color:#f391f3;
+    padding: 20px 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    top: 80px;
+    right: 0;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+
+}
+
+nav a{
+    text-transform: uppercase;
+    color: rgb(253, 253, 253);
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #9bdfff;
+}
+
+
+footer{
+    text-align: center;
+    background-color: #f391f3;
+    background-size: cover;
+    padding: 40px;
+    
+}
+.copyright{
+    color: white;
+    margin: 20px;
+    font-size: 13px;
+}
+
