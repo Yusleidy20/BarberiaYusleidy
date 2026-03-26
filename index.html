@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Barbería Yusleidy: agenda inteligente de citas, disponibilidad en tiempo real y asignación de clientes por barbero."
+    />
+    <title>Barbería Yusleidy · Agenda Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#inicio" class="brand">Barbería <span>Yusleidy</span></a>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="#servicios">Servicios</a>
+          <a href="#equipo">Equipo</a>
+          <a href="#agenda">Agenda</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Plataforma moderna para barbería</p>
+            <h1>Diseño premium + gestión inteligente de citas</h1>
+            <p class="hero-copy">
+              Visualiza barberos disponibles, asigna clientes y controla la agenda en
+              segundos. Una experiencia clara para negocio y clientes.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#agenda">Agendar ahora</a>
+              <a class="btn btn-ghost" href="#equipo">Ver disponibilidad</a>
+            </div>
+          </div>
+          <aside class="hero-stat-card">
+            <h2>Resumen rápido</h2>
+            <ul>
+              <li><span>Barberos activos</span><strong id="statBarbers">0</strong></li>
+              <li><span>Citas hoy</span><strong id="statAppointments">0</strong></li>
+              <li><span>Disponibles ahora</span><strong id="statAvailable">0</strong></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="servicios">
+        <div class="container">
+          <h2>Servicios</h2>
+          <div class="cards services-grid">
+            <article class="card">
+              <h3>Corte clásico</h3>
+              <p>Acabado limpio y elegante para uso diario.</p>
+              <p class="pill">30 min · $10</p>
+            </article>
+            <article class="card">
+              <h3>Fade premium</h3>
+              <p>Degradado preciso con técnica profesional.</p>
+              <p class="pill">45 min · $14</p>
+            </article>
+            <article class="card">
+              <h3>Barba + perfilado</h3>
+              <p>Diseño definido y cuidado detallado de barba.</p>
+              <p class="pill">30 min · $8</p>
+            </article>
+            <article class="card">
+              <h3>Combo completo</h3>
+              <p>Corte + barba para salida impecable.</p>
+              <p class="pill">60 min · $18</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="equipo">
+        <div class="container">
+          <div class="section-head">
+            <h2>Equipo y disponibilidad</h2>
+            <p>Estado en tiempo real de cada barbero y sus clientes asignados.</p>
+          </div>
+          <div id="barberGrid" class="barber-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section" id="agenda">
+        <div class="container booking-layout">
+          <div class="booking-panel card glass">
+            <h2>Agendamiento de citas</h2>
+            <p class="muted">
+              Completa el formulario para asignar cliente y bloquear espacio en agenda.
+            </p>
+            <form id="bookingForm" class="form-grid">
+              <label>
+                Cliente
+                <input name="client" type="text" placeholder="Nombre del cliente" required />
+              </label>
+              <label>
+                Servicio
+                <select name="service" required>
+                  <option value="Corte clásico">Corte clásico</option>
+                  <option value="Fade premium">Fade premium</option>
+                  <option value="Barba + perfilado">Barba + perfilado</option>
+                  <option value="Combo completo">Combo completo</option>
+                </select>
+              </label>
+              <label>
+                Barbero
+                <select name="barber" id="barberSelect" required></select>
+              </label>
+              <label>
+                Fecha
+                <input name="date" type="date" id="dateInput" required />
+              </label>
+              <label>
+                Hora
+                <select name="time" required>
+                  <option>09:00</option>
+                  <option>10:00</option>
+                  <option>11:00</option>
+                  <option>12:00</option>
+                  <option>14:00</option>
+                  <option>15:00</option>
+                  <option>16:00</option>
+                  <option>17:00</option>
+                </select>
+              </label>
+              <button class="btn btn-primary" type="submit">Guardar cita</button>
+            </form>
+            <p id="formFeedback" class="feedback" role="status"></p>
+          </div>
+
+          <aside class="card glass agenda-list-wrap">
+            <h3>Agenda del día</h3>
+            <ul id="agendaList" class="agenda-list"></ul>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© 2026 Barbería Yusleidy</p>
+        <a href="https://wa.me/10000000000" class="whatsapp-link">WhatsApp</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
